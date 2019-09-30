@@ -1,8 +1,6 @@
-package lamda;
+package lombok;
 
-import lombok.Person;
-
-public class Test {
+public class LombokTest {
     public static void main(String[] args) {
         Person p = new Person();
         p.setAge(20);
