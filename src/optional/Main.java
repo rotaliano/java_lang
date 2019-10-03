@@ -1,6 +1,7 @@
 package optional;
 
 import java.util.Optional;
+import static java.lang.System.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -18,5 +19,19 @@ public class Main {
         Optional<Integer> optionalInteger = IntegerList.getUseOptional(2);
         Integer value3 = optionalInteger.orElse(-1) + 100;
         System.out.println("結果:" + value3);
+
+        Optional<String> empty = Optional.empty();
+        out.println(empty.isPresent()); // false
+        out.println(empty.orElse("other")); // other
+        //out.println(empty.get()); // NoSuchElementException
+
+        // of
+        String str = "nonNull";
+        Optional<String> nonNullString = Optional.of(str);
+        out.println(nonNullString.isPresent()); // true
+        out.println(nonNullString.get()); // nonNull
+
+        String strNull = null;
+        //Optional.of(strNull); // NullPointerException
     }
 }
