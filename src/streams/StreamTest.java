@@ -6,7 +6,10 @@ import java.util.List;
 /**
  * https://docs.oracle.com/javase/jp/8/docs/api/java/util/function/package-summary.html
  */
-public class Test {
+public class StreamTest {
+    /**
+     * java.util.Collectionを実装しているすべてのクラスは stream() メソッドを持つようになった
+     */
     public static void main(String[] args) {
         int[] numbers = {-1, 2, 0, -3, 8};
 
@@ -16,7 +19,7 @@ public class Test {
             numberList.add(n);
         }
 
-        numberList.stream().forEach((i) -> {
+        numberList.parallelStream().forEach((i) -> {
             System.out.println(i + " ");
         });
 
