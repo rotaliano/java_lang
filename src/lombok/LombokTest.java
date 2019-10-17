@@ -2,9 +2,10 @@ package lombok;
 
 public class LombokTest {
     public static void main(String[] args) {
-        Person p = new Person();
-        p.setAge(20);
-        p.setName("Tuyoshi");
+        Person p = Person.builder()
+              .age(20)
+              .name("Tuyoshi")
+              .build();
 
         System.out.println("age:" + p.getAge());
         System.out.println("name:" + p.getName());
