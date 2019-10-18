@@ -1,0 +1,9 @@
+<ivy-module version="2.0">
+  <!-- https://mvnrepository.com -->
+  <info organisation="com.example" module="sample"/>
+  <dependencies>
+    <dependency org="org.apache.commons" name="commons-lang3" rev="3.3.2"/>
+    <dependency org="com.google.inject" name="guice" rev="4.2.2"/>
+    <dependency org="com.sun.jersey" name="jersey-core" rev="1.19.4"/>
+  </dependencies>
+</ivy-module>

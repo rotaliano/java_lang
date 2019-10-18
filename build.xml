@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="sample" basedir="." default="package" xmlns:ivy="antlib:org.apache.ivy.ant">
+
+  <property name="project" value="sample" />
+  <property name="version" value="0.0.1" />
+  <property name="src.dir" location="src/main/java" />
+  <!-- パスを修正 -->
+  <property name="lib.dir" location="lib" />
+  <property name="build.dir" location="target/classes" />
+
+  <!-- クラスパスを修正 -->
+  <path id="classpath">
+    <fileset dir="${lib.dir}" />
+  </path>
+
+  <!-- Java実行時のクラスパスの定義を追加 -->
+  <path id="run.classpath">
+    <path refid="classpath" />
+    <path location="${build.dir}" />
+  </path>
+
+  <target name="echo">
+    <echo message="Hello, World!" />
+  </target>
+
+  <target name="package" depends="compile">
+    <jar destfile="${project}-${version}.jar" basedir="${build.dir}" />
+  </target>
+
+  <!-- runターゲットを追加 -->
+  <target name="run" depends="compile">
+    <java classpathref="run.classpath" classname="HelloWorld" />
+  </target>
+
+  <!-- resolveターゲットへの依存を追加 -->
+  <target name="compile" depends="clean,resolve">
+    <mkdir dir="${build.dir}" />
+    <javac includeAntRuntime="false"
+           srcdir="${src.dir}"
+           destdir="${build.dir}"
+           classpathref="classpath"
+    />
+  </target>
+
+  <target name="resolve">
+    <ivy:retrieve/>
+  </target>
+
+  <target name="clean">
+    <delete dir="${build.dir}" />
+    <delete file="${project}-${version}.jar" />
+  </target>
+
+</project>
