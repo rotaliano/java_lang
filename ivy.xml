@@ -2,13 +2,20 @@
   <!-- https://mvnrepository.com -->
   <info organisation="com.example" module="sample"/>
   <dependencies>
-    <dependency org="org.apache.commons" name="commons-lang3" rev="3.3.2"/>
     <dependency org="com.google.inject" name="guice" rev="4.2.2"/>
-    <dependency org="com.sun.jersey" name="jersey-core" rev="1.19.4"/>
-    <dependency org="org.glassfish.jersey.core" name="jersey-client" rev="2.29.1"/>
-      <!-- https://mvnrepository.com/artifact/com.sun.jersey.jersey-test-framework/jersey-test-framework-grizzly2 -->
-      <dependency org="com.sun.jersey.jersey-test-framework" name="jersey-test-framework-grizzly2" rev="1.19.4"/>
+    <dependency org="com.google.guava" name="guava" rev="28.1-jre"/>
+<!--    <dependency org="org.glassfish.jersey.core" name="jersey-server" rev="2.29.1"/>-->
+<!--    <dependency org="org.glassfish.jersey.core" name="jersey-client" rev="2.29.1"/>-->
+<!--    <dependency org="org.glassfish.grizzly" name="grizzly-http-servlet" rev="2.4.4"/>-->
+<!--    <dependency org="org.glassfish.grizzly" name="grizzly-http-server" rev="2.4.4"/>-->
+<!--    <dependency org="org.glassfish.jersey.core" name="jersey-server" rev="2.29.1"/>-->
 
-      <dependency org="org.projectlombok" name="lombok" rev="1.18.10"/>
+<!--    <dependency org="org.glassfish.grizzly" name="grizzly-framework" rev="2.4.4"/>-->
+<!--    <dependency org="com.sun.jersey" name="jersey-core" rev="1.19.4"/>-->
+<!--    <dependency org="com.sun.jersey.jersey-test-framework" name="jersey-test-framework-grizzly2" rev="1.19.4"/>-->
+    <dependency org="org.projectlombok" name="lombok" rev="1.18.10"/>
+<!--    <dependency org="org.junit.jupiter" name="junit-jupiter-api" rev="5.5.2"/>-->
+<!--    <dependency org="javax.servlet" name="javax.servlet-api" rev="4.0.1"/>-->
+
   </dependencies>
 </ivy-module>

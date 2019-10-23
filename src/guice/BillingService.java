@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 public class BillingService {
     private final CreditCardProcessor processor;
     private final TransactionLog transactionLog;
+    private final ResourceMapper rm;
 
 //    @Inject
 //    public BillingService(CreditCardProcessor processor, TransactionLog transactionLog) {

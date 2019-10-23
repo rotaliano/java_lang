@@ -15,5 +15,7 @@ public class BillingModule extends AbstractModule {
          * PaypalCreditCardProcessorで満たされる必要があることを伝えます。
          */
         bind(CreditCardProcessor.class).to(PaypalCreditCardProcessor.class);
+
+        bind(ResourceMapper.class);
     }
 }
