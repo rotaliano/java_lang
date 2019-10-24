@@ -46,6 +46,7 @@
   </target>
 
   <target name="clean">
+    <delete dir="${lib.dir}" />
     <delete dir="${build.dir}" />
     <delete file="${project}-${version}.jar" />
   </target>

@@ -4,7 +4,7 @@
   <dependencies>
     <dependency org="com.google.inject" name="guice" rev="4.2.2"/>
     <dependency org="com.google.guava" name="guava" rev="28.1-jre"/>
-    <dependency org="org.projectlombok" name="lombok" rev="1.18.10"/>
+    <dependency org="org.projectlombok" name="lombok" rev="1.16.20"/>
 
     <dependency org="org.mybatis" name="mybatis" rev="3.5.3"/>
     <dependency org="mysql" name="mysql-connector-java" rev="8.0.18"/>
