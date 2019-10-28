@@ -8,5 +8,7 @@
 
     <dependency org="org.mybatis" name="mybatis" rev="3.5.3"/>
     <dependency org="mysql" name="mysql-connector-java" rev="8.0.18"/>
+
+    <dependency org="com.fasterxml.jackson.core" name="jackson-databind" rev="2.10.0"/>
   </dependencies>
 </ivy-module>
