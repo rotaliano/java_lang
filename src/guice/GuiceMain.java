@@ -4,6 +4,7 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 
 public class GuiceMain {
+
     public static void main(String[] args) {
         /*
          * Guice.createInjector（）はモジュールを受け取り、新しいインジェクターインスタンスを返します

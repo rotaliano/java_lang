@@ -1,5 +1,9 @@
-.idea/
+# files
 .DS_Store
-out/
-target/
-lib/
+
+# dirs
+.idea
+out
+target
+lib
+log

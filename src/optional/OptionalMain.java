@@ -2,21 +2,22 @@ package optional;
 
 import java.util.Optional;
 import static java.lang.System.*;
+import static optional.IntegerList.*;
 
-public class Main {
+public class OptionalMain {
     public static void main(String[] args) {
-        Integer value = IntegerList.get(2);
+        Integer value = get(2);
         if (value == null) {
             value = -1;
         }
         value += 100;
         System.out.println("結果:" + value);
 
-        Integer value2 = Optional.ofNullable(IntegerList.get(2)).orElse(-1);
+        Integer value2 = Optional.ofNullable(get(2)).orElse(-1);
         value2 += 100;
         System.out.println("結果:" + value2);
 
-        Optional<Integer> optionalInteger = IntegerList.getUseOptional(2);
+        Optional<Integer> optionalInteger = getUseOptional(2);
         Integer value3 = optionalInteger.orElse(-1) + 100;
         System.out.println("結果:" + value3);
 
@@ -33,5 +34,8 @@ public class Main {
 
         String strNull = null;
         //Optional.of(strNull); // NullPointerException
+
+        Optional<Boolean> enable = getEnable();
+        out.println(enable.orElse(false));
     }
 }
