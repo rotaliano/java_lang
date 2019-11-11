@@ -12,16 +12,18 @@ public class OptionalTest {
             out.println(value);
         });
 
+        Optional<String > opt2 = optionalFunction();
+
         // mapはOptional型のオブジェクトが値を持つ場合のみその中身の値に対して引数として渡されたラムダ式を適用し
         // その結果得られた値をOptional型でラップして返却します
-        Optional<String> mapped = opt.map(value2 -> {
+        Optional<String> mapped = opt2.map(value2 -> {
             return "-" + value2;
         });
         out.print(mapped.orElse("default string"));
     }
 
     private static Optional<String> optionalFunction() {
-        String abc = null;
+        String abc = "あいうえお";
         return Optional.ofNullable(abc);
     }
 }
