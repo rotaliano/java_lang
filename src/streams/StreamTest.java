@@ -33,9 +33,9 @@ public class StreamTest {
         System.out.println("map");
 
         // map
-        numberList.stream().filter((i) -> { return i >= 0;})
+        numberList.stream().filter((i) -> { return i >= 0;}) // 中間操作
                 .map((i) -> { return "*" + i + "*"; }) // 中間操作
-                .forEach((s) -> { System.out.println(s + " "); });
+                .forEach((s) -> { System.out.println(s + " "); }); // 終端操作
 
 
     }
