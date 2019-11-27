@@ -9,7 +9,7 @@ public class FunctionObjectMain {
 
     public static void main(String[] args) {
         // 関数オブジェクトを格納可能な型
-        // ある特定の引数ともドリチを持つ関数オブジェクトを格納できるのは
+        // ある特定の引数と戻り値を持つ関数オブジェクトを格納できるのは
         // その引数と戻り値をもつメソッド宣言を含んだSAM(single-abstract-method interface)インターフェースの型
         // 抽象メソッドを1つしか含まないインタフェースのこと
         IntBinaryOperator func = FunctionObjectMain::sub;
@@ -31,13 +31,14 @@ public class FunctionObjectMain {
     }
 
     public interface Func1 {
-        public abstract boolean call(int x);
+        boolean call(int x);
     }
     public interface Func2 {
-        public abstract String call(boolean x, String y);
+        String call(boolean x, String y);
     }
 
     public static boolean isOdd(int x) { return (x % 2 == 1); }
+
     public String addNamePrefix(boolean male, String name) {
         if (male == true) { return "Mr." + name; }
         else { return "Ms." + name; }
