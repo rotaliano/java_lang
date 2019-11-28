@@ -2,11 +2,9 @@ package lombok;
 
 import lombok.Data;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Value
 @Builder
-public class Person {
+class Person {
     private int age;
     private String name;
 }

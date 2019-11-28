@@ -16,7 +16,7 @@ public class SampleList {
     private final List<String> list = newArrayList();
 
     /**
-     * コンストラクタで@Named で sample.list という値を指定して List<String> の値を受け取るようにしてます
+     * コンストラクタで @Named で sample.list という値を指定して List<String> の値を受け取るようにしてます
      */
     @Inject
     public SampleList(@Named("sample.list") List<String> srcList) {

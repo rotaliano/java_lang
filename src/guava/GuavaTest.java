@@ -3,13 +3,14 @@ package guava;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
+import static org.testng.Assert.assertEquals;
+
 
 /**
  * https://www.codeflow.site/ja/article/guava-cache
  */
-public class GuavaTest extends Assertions {
+public class GuavaTest {
     @Test
     public void whenCacheMiss__thenValueIsComputed() {
         CacheLoader<String, String> loader;

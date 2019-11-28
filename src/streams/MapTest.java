@@ -15,8 +15,9 @@ public class MapTest {
         // Stream map(Function<T,R>)
         // map メソッドは Function を引数に取り、処理後の結果を Stream にして返します。
         // filter と同じく中間操作
-        numberList.stream().filter((i) -> { return 0 <= i;})
-                  .map((i) -> { return "*" + i + "*";})
+        numberList.stream()
+                  .filter((i) -> { return 0 <= i;})
+                  .map((i) -> { return i + 1;})
                   .forEach(System.out::println);
     }
 }
