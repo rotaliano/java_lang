@@ -3,8 +3,8 @@ package mockito.src;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Service
-{
+public class Service implements ServiceInterFace {
+
     private Map<Integer, String> contents = new HashMap<>();
 
     public Service() {
