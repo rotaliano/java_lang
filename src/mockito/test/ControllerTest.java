@@ -1,12 +1,11 @@
 package mockito.test;
 
 import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static org.mockito.internal.verification.VerificationModeFactory.times;
 import static org.testng.Assert.assertEquals;
+
 import mockito.src.Controller;
-import mockito.src.Service;
+import mockito.src.ServiceInterFace;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
@@ -14,13 +13,10 @@ import org.mockito.Spy;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
-@Test
 public class ControllerTest {
 
     @Mock
-    private Service service;
+    private ServiceInterFace service;
     @Spy
     @InjectMocks
     private Controller controller; // Controllerクラスがテスト対象ですので、Controllerクラスに@InjectMocks

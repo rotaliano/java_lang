@@ -1,13 +1,15 @@
 package mockito.src;
 
-public class Controller
-{
-    private Service service = new Service();
+import lombok.AllArgsConstructor;
+
+@AllArgsConstructor
+public class Controller {
+    private final ServiceInterFace service;
 
     public String getContent(Integer id) {
         // Serviceクラスのメソッドに依存している部分
         String content = service.getContentById(id);
-        content = editContent(content);
+        //content = editContent(content);
         return content;
     }
 
