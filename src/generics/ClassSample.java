@@ -35,5 +35,14 @@ public class ClassSample {
         Object o = cs5.getT();
         System.out.println(o);
 
+        String hoge = getT("Hellow");
+        System.out.println(hoge);
+        Integer fuga = getT(1);
+        System.out.println(fuga);
+    }
+
+    // static メソッドを定義する際に戻り値の型名であるTの前に「<T>」句を記述する必要があり
+    private static <T> T getT(T t) {
+        return t;
     }
 }
